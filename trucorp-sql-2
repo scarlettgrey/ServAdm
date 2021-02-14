@@ -1,0 +1,5 @@
+FROM mysql
+
+RUN apt-get update
+
+COPY /trucorp-db.sql /docker-entrypoint-initdb.d/
