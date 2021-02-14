@@ -1,6 +1,6 @@
 <?php
 	echo "Ini UAS!!!";
-	$link = mysqli_connect("172.18.0.2","root","uas","trucorp");
+	$link = mysqli_connect("localhost","root","","trucorp");
 	if(!$link){
 		echo "Can\'t connect to the MySQL";
 		exit;
@@ -11,5 +11,6 @@
 	foreach($r as $s){
 		echo $s['id'].$s['nama'].$s['kantor']."<br>";
 	}
+	include_once('total.php');
 	$link->close();
 ?>
